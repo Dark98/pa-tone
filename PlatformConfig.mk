@@ -17,7 +17,7 @@ PLATFORM_COMMON_PATH := device/sony/tone
 PRODUCT_PLATFORM_SOD := true
 
 TARGET_BOARD_PLATFORM := msm8996
-KERNEL_PATH := kernel/sony/msm-4.9
+KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 
 #ART_BOOT_IMAGE_EXTRA_ARGS=--runtime-arg -verbose:verifier
 
@@ -69,7 +69,7 @@ BOARD_CUSTOM_BT_CONFIG := $(PLATFORM_COMMON_PATH)/bluetooth/vnd_generic.txt
 TARGET_PER_MGR_ENABLED := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
+BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
 # Display
 TARGET_USES_GRALLOC1 := true
